@@ -1,0 +1,54 @@
+{
+    "name": "mamun/currency-exchange",
+    "description": "",
+    "keywords": [
+        "mamun",
+        "currency-exchange"
+    ],
+    "homepage": "https://github.com/mamun/currency-exchange",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Abdullah Al Mamun",
+            "email": "mamun167359@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mamun\\CurrencyExchange\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mamun\\CurrencyExchange\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mamun\\CurrencyExchange\\CurrencyExchangeServiceProvider"
+            ],
+            "aliases": {
+                "CurrencyExchange": "Mamun\\CurrencyExchange\\CurrencyExchangeFacade"
+            }
+        }
+    }
+}
