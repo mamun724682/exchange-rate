@@ -1,14 +1,15 @@
-# Very short description of the package
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mamun/currency-exchange.svg?style=flat-square)](https://packagist.org/packages/mamun/currency-exchange)
-[![Total Downloads](https://img.shields.io/packagist/dt/mamun/currency-exchange.svg?style=flat-square)](https://packagist.org/packages/mamun/currency-exchange)
-![GitHub Actions](https://github.com/mamun/currency-exchange/actions/workflows/main.yml/badge.svg)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+# Currency Exchange rate
 
 ## Installation
 
 You can install the package via composer:
+
+- Clone this repository to your root laravel project directory
+- Run
+
+```bash
+composer config repositories.local '{"type": "path", "url": "./exchange-rate"}' --file composer.json
+```
 
 ```bash
 composer require mamun/currency-exchange
@@ -17,7 +18,10 @@ composer require mamun/currency-exchange
 ## Usage
 
 ```php
-// Usage description here
+$currencyExchange = new \Mamun\CurrencyExchange\CurrencyExchange();
+$result = $currencyExchange->convert(20, 'usd');
+
+// $result: '21.552USD'
 ```
 
 ### Testing
@@ -46,7 +50,3 @@ If you discover any security related issues, please email mamun167359@gmail.com 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
