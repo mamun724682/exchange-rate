@@ -1,6 +1,6 @@
 {
     "name": "mamun/currency-exchange",
-    "description": "",
+    "description": "A currency exchange rate api wrapper.",
     "keywords": [
         "mamun",
         "currency-exchange"
@@ -12,7 +12,7 @@
         {
             "name": "Abdullah Al Mamun",
             "email": "mamun167359@gmail.com",
-            "role": "Developer"
+            "role": "Web Developer"
         }
     ],
     "require": {
