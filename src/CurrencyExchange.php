@@ -11,9 +11,15 @@ class CurrencyExchange
      */
     private $defaultCurrency;
 
-    public function __construct(private RequestBuilder $requestBuilder)
+    /**
+     * Request builder
+     */
+    private $requestBuilder;
+
+    public function __construct()
     {
         $this->defaultCurrency = config('currency-exchange.default_currency');
+        $this->requestBuilder = new RequestBuilder();
     }
 
     /**
